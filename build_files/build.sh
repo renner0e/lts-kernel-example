@@ -13,6 +13,9 @@ mv /tmp/rpms/* /tmp/akmods/
 
 dnf5 -y install /tmp/kernel-rpms/kernel-longterm{,-core,-modules,-modules-core,-modules-extra}-"${KERNEL}".rpm
 
+
+# kernel is an important package make sure to check which packages get removed because packages don't account for LTS kernel
+# stuff like ublue-brew will be removed because gcc depends on kernel things
 dnf5 -y remove kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers}
 
 
