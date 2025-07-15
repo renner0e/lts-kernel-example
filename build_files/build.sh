@@ -13,7 +13,7 @@ mv /tmp/rpms/* /tmp/akmods/
 
 dnf5 -y install /tmp/kernel-rpms/kernel-longterm{,-core,-modules,-modules-core,-modules-extra}-"${KERNEL}".rpm
 
-dnf5 -y remove kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs}
+dnf5 -y remove kernel{,-core,-modules,-modules-core,-modules-extra,-tools,-tools-libs,-headers}
 
 
 # Prevent kernel stuff from upgrading again
